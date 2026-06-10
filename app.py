@@ -326,7 +326,7 @@ sel_pickup = st.sidebar.multiselect("Pickup Country", pickup_all, placeholder="A
 delivery_all = sorted(df_raw["Delivery Country"].dropna().unique())
 sel_delivery = st.sidebar.multiselect("Delivery Country", delivery_all, placeholder="All countries")
 
-locs_all = sorted(df_raw["Location"].dropna().unique())
+locs_all = sorted(df_raw["Location"].dropna().astype(str).unique())
 sel_locs = st.sidebar.multiselect("Location", locs_all, placeholder="All locations")
 
 # Apply filters
